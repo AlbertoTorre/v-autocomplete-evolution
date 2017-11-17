@@ -52,7 +52,8 @@ export default {
     inputChange () {
       this.showList = true
       this.cursor = -1
-      this.onSelectItem(null, 'inputChange')
+      //this.onSelectItem(null, 'inputChange')
+      console.log('zasdasdsa')
       utils.callUpdateItems(this.searchText, this.updateItems)
       this.$emit('change', this.searchText)
     },
@@ -67,7 +68,7 @@ export default {
 
     blur () {
       this.$emit('blur', this.searchText)
-      setTimeout( () => this.showList = false, 200)
+      setTimeout( () => this.showList = false, 100)
     },
 
     onClickItem(item) {
