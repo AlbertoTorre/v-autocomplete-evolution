@@ -78,7 +78,7 @@ export default {
     onSelectItem (item) {
       if (item) {
         this.internalItems = [item]
-        this.searchText = this.getLabel(item)
+        //this.searchText = this.getLabel(item)
         this.$emit('item-selected', item)
       } else {
         this.setItems(this.items)
@@ -104,6 +104,7 @@ export default {
     keyDown (e) {
       if (this.cursor < this.internalItems.length) {
         this.cursor++
+        this.showList = true
         this.itemView(this.$el.getElementsByClassName('v-autocomplete-list-item')[this.cursor])
       }
     },
@@ -132,8 +133,8 @@ export default {
       this.setItems(newValue)
       let item = utils.findItem(this.items, this.searchText, this.autoSelectOneItem)
       if (item) {
-        this.onSelectItem(item)
-        this.showList = false
+        //this.onSelectItem(item)
+        this.showList = true
       }
     },
     value (newValue) {

@@ -1,4 +1,4 @@
-v-autocomplete-evolution
+v-autocomplete
 ==============
 
 ---
@@ -54,8 +54,8 @@ Vue.use(Autocomplete)
 
 ```html
 <template>
-  <v-autocomplete-evolution :items="items" v-model="item" :get-label="getLabel" :component-item='template' @update-items="updateItems">
-</v-autocomplete-evolution>
+  <v-autocomplete :items="items" v-model="item" :get-label="getLabel" :component-item='template' @update-items="updateItems">
+</v-autocomplete>
 </template>
 
 <script>
@@ -138,20 +138,20 @@ What about appearence?
 Just overwrite their css classes. See the structure in *stylus* lang:
 
 ```stylus
-.v-autocomplete-evolution
-  .v-autocomplete-evolution-input-group
-    .v-autocomplete-evolution-input
-  .v-autocomplete-evolution-list
-    .v-autocomplete-evolution-list-item
-      &.v-autocomplete-evolution-item-active
+.v-autocomplete
+  .v-autocomplete-input-group
+    .v-autocomplete-input
+  .v-autocomplete-list
+    .v-autocomplete-list-item
+      &.v-autocomplete-item-active
 ```
 
 Follows the css used in the [DEMO](http://albertotorre.github.io/v-autocomplete-evolution):
 
 ```stylus
-.v-autocomplete-evolution
-  .v-autocomplete-evolution-input-group
-    .v-autocomplete-evolution-input
+.v-autocomplete
+  .v-autocomplete-input-group
+    .v-autocomplete-input
       font-size 1.5em
       padding 10px 15px
       box-shadow none
@@ -159,11 +159,11 @@ Follows the css used in the [DEMO](http://albertotorre.github.io/v-autocomplete-
       width calc(100% - 32px)
       outline none
       background-color #eee
-    &.v-autocomplete-evolution-selected
-      .v-autocomplete-evolution-input
+    &.v-autocomplete-selected
+      .v-autocomplete-input
         color green
         background-color #f2fff2
-  .v-autocomplete-evolution-list
+  .v-autocomplete-list
     width 100%
     text-align left
     border none
@@ -171,7 +171,7 @@ Follows the css used in the [DEMO](http://albertotorre.github.io/v-autocomplete-
     max-height 400px
     overflow-y auto
     border-bottom 1px solid #157977
-    .v-autocomplete-evolution-list-item
+    .v-autocomplete-list-item
       cursor pointer
       background-color #fff
       padding 10px

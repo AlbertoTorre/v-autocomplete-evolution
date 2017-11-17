@@ -9,10 +9,10 @@ div(style="text-align: center;")
   hr
   p.left.note
     b Note:&nbsp;
-    | The v-autocomplete component does not contain any css. Therefore, you can customize the appearence for any framework by applying style to the generated classes.
+    | The v-autocomplete-evolution component does not contain any css. Therefore, you can customize the appearence for any framework by applying style to the generated classes.
     br
     b
-      a(href="https://github.com/paliari/v-autocomplete#what-about-appearence", target="_blank") See an example
+      a(href="https://github.com/AlbertoTorre/v-autocomplete-evolution#what-about-appearence", target="_blank") See an example
 </template>
 
 <script>
