@@ -53,7 +53,6 @@ export default {
       this.showList = true
       this.cursor = -1
       //this.onSelectItem(null, 'inputChange')
-      console.log('zasdasdsa')
       utils.callUpdateItems(this.searchText, this.updateItems)
       this.$emit('change', this.searchText)
     },
@@ -81,10 +80,12 @@ export default {
         this.internalItems = [item]
         //this.searchText = this.getLabel(item)
         this.$emit('item-selected', item)
-      } else {
+      }else{
         this.setItems(this.items)
       }
+
       this.$emit('input', item)
+      this.showList = false
     },
 
     setItems (items) {
@@ -96,14 +97,14 @@ export default {
     },
 
     keyUp (e) {
-      if (this.cursor > -1) {
+      if (this.cursor > 0) {
         this.cursor--
         this.itemView(this.$el.getElementsByClassName('v-autocomplete-list-item')[this.cursor])
       }
     },
 
     keyDown (e) {
-      if (this.cursor < this.internalItems.length) {
+      if (this.cursor < this.internalItems.length-1 ) {
         this.cursor++
         this.showList = true
         this.itemView(this.$el.getElementsByClassName('v-autocomplete-list-item')[this.cursor])
