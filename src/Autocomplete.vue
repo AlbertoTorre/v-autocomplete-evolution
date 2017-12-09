@@ -7,7 +7,7 @@
             :disabled="inputAttrs.disabled || disabled"
             @blur="blur" @focus="focus" @input="inputChange"
             @keyup.enter="keyEnter" @keydown.tab="keyEnter"
-            @keydown.up="keyUp" @keydown.down="keyDown">
+            @keydown.up="keyUp" @keydown.down="keyDown" autocomplete="off">
     </div>
     <div class="v-autocomplete-list" v-if="showList && internalItems.length">
       <div class="v-autocomplete-list-item" v-for="item, i in internalItems" @click="onClickItem(item)"
@@ -77,15 +77,16 @@ export default {
 
     onSelectItem (item) {
       if (item) {
-        this.internalItems = [item]
+        //this.internalItems = [item]
         //this.searchText = this.getLabel(item)
         this.$emit('item-selected', item)
       }else{
         this.setItems(this.items)
       }
-
       this.$emit('input', item)
       this.showList = false
+
+      this.cursor = -1
     },
 
     setItems (items) {

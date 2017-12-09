@@ -1,6 +1,6 @@
 export default {
   minLen: 3,
-  wait: 500,
+  wait: 200,
   timeout: null,
 
   isUpdateItems (text) {
