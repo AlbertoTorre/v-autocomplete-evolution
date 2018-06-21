@@ -39,6 +39,7 @@ export default {
     inputClass: {type: String, default: 'v-autocomplete-input'},
     disabled: {type: Boolean, default: false},
     inputAttrs: {type: Object, default: {}},
+    clearBoxText:{ type:Boolean, default:false }
   },
   data () {
     return {
@@ -143,6 +144,12 @@ export default {
     value (newValue) {
       if (!this.isSelecteValue(newValue) ) {
         this.onSelectItem(newValue)
+      }
+    },
+    clearBoxText(newValue){
+      if(newValue){
+        this.searchText = ''
+        this.clearBoxText = false
       }
     }
   }
