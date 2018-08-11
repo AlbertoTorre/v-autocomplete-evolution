@@ -1,6 +1,6 @@
 {
   "name": "v-autocomplete-evolution",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Autocomplete component for Vue.js",
   "author": "AlbertoTorre <albertochoatorres@gmail.com>",
   "main": "dist/v-autocomplete-evolution.js",
@@ -12,7 +12,7 @@
     "start": "yarn dev",
     "dev": "poi build ./demo/index.js --config ./demo/build.config.js --filename.css albertoTorre-vue.css --no-sourceMap --no-minimize --dist ./docs",
     "release": "rm -rf dist && yarn dist",
-    "demo:open": "open 'http://localhost:5000/'; serve ./docs/"
+    "demo:open": "open 'http://localhost:5200/'; serve ./docs/"
   },
   "files": [
     "dist/"
