@@ -149,7 +149,6 @@ export default {
     clearBoxText(newValue){
       if(newValue){
         this.searchText = ''
-        this.clearBoxText = false
       }
     }
   }

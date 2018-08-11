@@ -1,7 +1,7 @@
 {
   "name": "v-autocomplete-evolution",
-  "version": "1.1.6",
-  "description": "Autocomplete component for Vue.js",
+  "version": "1.1.7",
+  "description": "Autocomplete component for Vue2",
   "author": "AlbertoTorre <albertochoatorres@gmail.com>",
   "main": "dist/v-autocomplete-evolution.js",
   "license": "MIT",
