@@ -1,18 +1,19 @@
 <template lang="pug">
 div(style="text-align: center;")
-  h2 Type some animal name to search
+  form(:method='post', :action='hola')
+    h2 Type some animal name to search
 
-  v-autocomplete(:items="items" v-model='item', :get-label='getLabel', :min-len='0' @update-items='update', :component-item='tpl', @item-selected="itemSelected", @item-clicked="itemClicked", :input-attrs="{name: 'input-test', id: 'v-my-autocomplete'}")
-  p Selected item:
-  pre {{ item }}
+    v-autocomplete(:items="items" v-model='item', :get-label='getLabel', :min-len='0' @update-items='update', :component-item='tpl', @item-selected="itemSelected", @item-clicked="itemClicked", :input-attrs="{name: 'input-test', id: 'v-my-autocomplete'}")
+    p Selected item:
+    pre {{ item }}
 
-  hr
-  p.left.note
-    b Note:&nbsp;
-    | The v-autocomplete-evolution component does not contain any css. Therefore, you can customize the appearence for any framework by applying style to the generated classes.
-    br
-    b
-      a(href="https://github.com/AlbertoTorre/v-autocomplete-evolution#what-about-appearence", target="_blank") See an example
+    hr
+    p.left.note
+      b Note:&nbsp;
+      | The v-autocomplete-evolution component does not contain any css. Therefore, you can customize the appearence for any framework by applying style to the generated classes.
+      br
+      b
+        a(href="https://github.com/AlbertoTorre/v-autocomplete-evolution#what-about-appearence", target="_blank") See an example
 </template>
 
 <script>
