@@ -6,7 +6,7 @@
             :placeholder="inputAttrs.placeholder || placeholder"
             :disabled="inputAttrs.disabled || disabled"
             @blur="blur" @focus="focus" @input="inputChange"
-            @keyup.enter="keyEnter" @keydown.tab="keyEnter"
+            @keyup.enter.prevent="keyEnter" @keydown.tab="keyEnter"
             @keydown.up="keyUp" @keydown.down="keyDown" autocomplete="off">
     </div>
     <div class="v-autocomplete-list" v-if="showList && internalItems.length">
